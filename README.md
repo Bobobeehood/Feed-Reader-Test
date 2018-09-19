@@ -2,6 +2,24 @@
 This project demonstrates browser based testing using Jasmine.
 
 
-## Step To Run
+## STEP TO RUN
 
 Open index.html page, all the test should be seen at the bottom of the page, or click on this link https://bobobeehood.github.io/Feed-Reader-Test to open the page.
+
+
+## TEST
+
+### RSS FEED
+- Feeds are Defined
+- Feed URL is not empty
+- Feed names are not empty.
+
+### THE MENU
+- The menu is hidden by default
+- When clicked the menu toggles visibility
+
+### INITIAL ENTRIES
+- Feed container has at least 1 entry
+
+### NEW FEED SELECTION:
+- Feed content changes when new feed is selected
