@@ -23,3 +23,8 @@ Open index.html page, all the test should be seen at the bottom of the page, or 
 
 ### NEW FEED SELECTION:
 - Feed content changes when new feed is selected
+
+### Resources I referred to while working on this project:
+- https://matthewcranford.com/feed-reader-walkthrough
+- https://google.com/
+- https://github.com/aviaryan/ud-feed-reader-testing
