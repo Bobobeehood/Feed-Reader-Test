@@ -4,7 +4,7 @@ This project demonstrates browser based testing using Jasmine.
 
 ## STEP TO RUN
 
-Open index.html page, all the test should be seen at the bottom of the page, or click on this linkhttps://bobobeehood.github.io/Feed-Reader-Test to open the page.
+Open index.html page, all the test should be seen at the bottom of the page, or click on this link https://bobobeehood.github.io/Feed-Reader-Test to open the page.
 
 
 ## TEST
