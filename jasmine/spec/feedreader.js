@@ -84,6 +84,8 @@ $(function() {
 
             menu.click();
             expect(body.classList.contains('menu-hidden')).toBe(false);
+            menu.click();
+            expect(body.classList.contains('menu-hidden')).toBe(true);
 
           });
 });
@@ -100,39 +102,44 @@ $(function() {
          * the use of Jasmine's beforeEach and asynchronous done() function.
          */
          beforeEach(function(done) {
-           loadFeed(0, done);
+           loadFeed(0,function () {
+             done();
+           });
 
          });
 
          it('completes work', function() {
-           const feed = document.querySelector('.feed');
-           expect(feed.children.length > 0).toBe(true);
+           const feed = $('.feed .entry');
+           expect(feed.length > 0).toBe(true);
 
          });
 });
 
     /* TODO: Write a new test suite named "New Feed Selection" */
+    
     //A test for New Feed Selection property
     describe('New Feed Selection', function() {
-        const feed = document.querySelector('.feed');
-        const initialFeed = [];
+
+        let initialFeed;
 
         /* TODO: Write a test that ensures when a new feed is loaded
          * by the loadFeed function that the content actually changes.
          * Remember, loadFeed() is asynchronous.
          */
          beforeEach(function(done) {
-           loadFeed(0);
-           Array.from(feed.children).forEach(function(entry) {
-                initialFeed.push(entry.innerText);
+           loadFeed(0 function() {
+             initialFeed = document.querySelector('.feed').innerHTML;
+             loadFeed(1, function () {
+               done();
+             });
            });
-           loadFeed(1,done);
-         });
+           });
 
-         it('content changes', function() {
-           Array.from(feed.children).forEach(function(entry,index) {
-              expect(entry.innerText === initialFeed[index]).toBe(false);
+
+         it('content changes', function(done) {
+           let newFeed = document.querySelector('.feed').innerHTML;
+           expect(newFeed).not.toBe(initialFeed);
+           done();
            });
          });
-});
 }());
