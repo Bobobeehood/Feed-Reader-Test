@@ -120,7 +120,7 @@ $(function() {
     //A test for New Feed Selection property
     describe('New Feed Selection', function() {
 
-        let initialFeed;
+        let initialFeed, newFeed;
 
         /* TODO: Write a test that ensures when a new feed is loaded
          * by the loadFeed function that the content actually changes.
@@ -137,7 +137,7 @@ $(function() {
 
 
          it('content changes', function(done) {
-           let newFeed = document.querySelector('.feed').innerHTML;
+           newFeed = document.querySelector('.feed').innerHTML;
            expect(newFeed).not.toBe(initialFeed);
            done();
            });
