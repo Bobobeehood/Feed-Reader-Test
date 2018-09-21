@@ -116,30 +116,29 @@ $(function() {
 });
 
     /* TODO: Write a new test suite named "New Feed Selection" */
-    
+
     //A test for New Feed Selection property
     describe('New Feed Selection', function() {
 
-        let initialFeed, newFeed;
+        let initialFeed;
 
         /* TODO: Write a test that ensures when a new feed is loaded
          * by the loadFeed function that the content actually changes.
          * Remember, loadFeed() is asynchronous.
          */
          beforeEach(function(done) {
-           loadFeed(0 function() {
+           loadFeed(0, function() {
              initialFeed = document.querySelector('.feed').innerHTML;
              loadFeed(1, function () {
                done();
              });
-           });
-           });
-
+         });
+     });
 
          it('content changes', function(done) {
-           newFeed = document.querySelector('.feed').innerHTML;
+           let newFeed = document.querySelector('.feed').innerHTML;
            expect(newFeed).not.toBe(initialFeed);
            done();
-           });
-         });
+      });
+    });
 }());
